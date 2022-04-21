@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "rect",
   "version": "${version}",
 
-  "name": "Example Mod",
+  "name": "Rectified Slabs",
   "description": "This is an example description! Tell everyone what your mod is about!",
   "authors": [
     "Me!"
@@ -14,20 +14,22 @@
   },
 
   "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "icon": "assets/rect/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.fabricmc.example.ExampleMod"
+      "me.jkmcameron.rs.RectifiedSlabs"
+    ],
+    "client": [
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "rect.mixins.json"
   ],
 
   "depends": {
-    "fabricloader": ">=0.13.3",
+    "fabricloader": ">=0.12.12",
     "fabric": "*",
     "minecraft": "1.18.x",
     "java": ">=17"
