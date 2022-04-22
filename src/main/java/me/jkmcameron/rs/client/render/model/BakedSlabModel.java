@@ -31,7 +31,7 @@ import java.util.function.Supplier;
 public class BakedSlabModel implements BakedModel, FabricBakedModel
 {
 
-    private BakedModel baseModel;
+    private final BakedModel baseModel;
 
     public BakedModel getBaseModel()
     {
@@ -69,7 +69,7 @@ public class BakedSlabModel implements BakedModel, FabricBakedModel
 
         if(isMixed)
         {
-            BakedModel mateSlabModel = ((BakedSlabModel) MinecraftClient.getInstance().getBakedModelManager().getModel(BlockModels.getModelId(blockEntity.getMateBlockState()))).getBaseModel();
+            BakedModel mateSlabModel = MinecraftClient.getInstance().getBakedModelManager().getModel(BlockModels.getModelId(blockEntity.getMateBlockState()));
 
             for(int j = 0; j <= ModelHelper.NULL_FACE_ID; j++) for(BakedQuad quad : mateSlabModel.getQuads(null, ModelHelper.faceFromIndex(j), randomSupplier.get()))
             {
