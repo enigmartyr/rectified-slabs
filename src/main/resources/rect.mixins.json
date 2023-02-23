@@ -1,16 +1,18 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "me.jkmcameron.rs.mixin",
+  "package": "me.enigmartyr.rs.mixin",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "block.SlabBlockMixin"
+    "block.DegradableMixin",
+    "block.OxidizableSlabBlockMixin",
+    "block.SlabBlockMixin",
+    "server.network.ServerPlayerInteractionManagerMixin"
   ],
   "client": [
-    "client.render.model.IJsonUnbakedModel",
-    "client.render.model.IModelLoader",
-    "client.render.model.json.WeightedUnbakedModelMixin",
-    "client.network.ClientPlayerInteractionManagerMixin"
+    "client.gui.hud.DebugHudMixin",
+    "client.network.ClientPlayerInteractionManagerMixin",
+    "client.render.model.json.WeightedUnbakedModelMixin"
   ],
   "server": [
   ],

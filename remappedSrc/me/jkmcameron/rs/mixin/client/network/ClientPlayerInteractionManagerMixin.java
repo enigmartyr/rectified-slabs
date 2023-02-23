@@ -35,8 +35,6 @@ public class ClientPlayerInteractionManagerMixin
     @Inject(method = "updateBlockBreakingProgress", at = @At("RETURN"), cancellable = true)
     public void updateBlockBreakingProgress(BlockPos pos, Direction direction, CallbackInfoReturnable<Boolean> cir)
     {
-        System.out.println(breakingSlabMate);
-
         if (!this.client.player.isBlockBreakingRestricted(this.client.world, pos, this.gameMode) && this.client.world.getWorldBorder().contains(pos) && !this.gameMode.isCreative())
         {
             BlockState blockState = this.client.world.getBlockState(pos);

@@ -19,22 +19,29 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "me.jkmcameron.rs.RectifiedSlabs"
+      "me.enigmartyr.rs.RectifiedSlabs"
     ],
     "client": [
+      "me.enigmartyr.rs.RectifiedSlabs"
+    ],
+    "preLaunch": [
+      "me.enigmartyr.rs.RectifiedSlabs"
     ]
   },
   "mixins": [
     "rect.mixins.json"
   ],
 
+  "accessWidener" : "rectifiedslabs.accesswidener",
+
+
   "depends": {
     "fabricloader": ">=0.12.12",
     "fabric": "*",
-    "minecraft": "1.18.x",
-    "java": ">=17"
+    "minecraft": "1.19.*",
+    "java": ">=17",
+    "carpet": ">=1.4.91"
   },
   "suggests": {
-    "another-mod": "*"
   }
 }
