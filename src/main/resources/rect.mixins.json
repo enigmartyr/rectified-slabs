@@ -1,0 +1,20 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.jkmcameron.rs.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "block.SlabBlockMixin"
+  ],
+  "client": [
+    "client.render.model.IJsonUnbakedModel",
+    "client.render.model.IModelLoader",
+    "client.render.model.json.WeightedUnbakedModelMixin",
+    "client.network.ClientPlayerInteractionManagerMixin"
+  ],
+  "server": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
